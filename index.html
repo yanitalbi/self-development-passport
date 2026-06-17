@@ -2461,7 +2461,8 @@ button:active:not(.tb) {
       if (!localStorage.getItem(k)) localStorage.setItem(k, v);
     });
   })();
-    document.querySelectorAll('.pane').forEach(p => p.classList.remove('active'));
+
+  function goTab(id, btn) {
     document.querySelectorAll('.tb').forEach(b => b.classList.remove('active'));
     document.getElementById('tab-' + id).classList.add('active');
     btn.classList.add('active');
